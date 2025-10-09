@@ -31,7 +31,9 @@ def test_search():
     driver.start_recording_screen()
     driver.find_element(By.ID, 'com.goibibo:id/icon').click()
     time.sleep(2)
-    driver.find_element(By.ID, 'com.goibibo:id/txtPlaceName').click()
+    driver.find_element(By.ID, 'hotel_landing_searched_text').click()
+    time.sleep(2)
+    driver.find_element(By.ID, 'edtSearch').send_keys("delhi")
     time.sleep(2)
     video_rawdata = driver.stop_recording_screen()
     #video_path = "/videos"
